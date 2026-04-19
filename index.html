@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srivaishnavism - The Path of Devotion</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Meta/SEO Tags -->
+    <meta name="description"
+        content="A serene, beautifully designed application on Srivaishnavism, covering the Alwars, the philosophy of Prapatthi, and the glory of the Divya Desam Perumals.">
+    <!-- D3.js for SVG Mapping -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#srivaishnavism">Srivaishnavism</a></li>
+            <li><a href="#alwars">Alwars</a></li>
+            <li><a href="#acharyas">Acharyas</a></li>
+            <li><a href="#divya-prabandham">Divya Prabandham</a></li>
+            <li><a href="#prapatthi">Prapatthi</a></li>
+            <li><a href="#divya-desams">Divya Desams</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Srivaishnavism</h1>
+            <p>A journey into the heart of divine love, surrender, and the glorious tradition of the Alwars and
+                Ramanujacharya.</p>
+        </div>
+    </header>
+
+    <section id="srivaishnavism">
+        <h2>What is Srivaishnavism?</h2>
+        <p class="intro-p">Srivaishnavism is a vibrant and ancient Hindu tradition deeply rooted in the Vedas,
+            Upanishads, and the soulful Tamil hymns of the Alwars (the <em>Divya Prabandham</em>). Central to this
+            tradition is the loving surrender to Lord Narayana (Vishnu) and His divine consort, Sri (Lakshmi), who acts
+            as the compassionate mediator between the soul and the Lord.</p>
+        <p class="intro-p">Guided by illustrious Acharyas like Sri Bhagavad Ramanuja, Srivaishnavism teaches
+            Visishtadvaita—the philosophy that the supreme Lord is the soul of both the sentient beings and the
+            insentient universe, holding everything in a harmonious, divine relationship.</p>
+    </section>
+
+    <section id="alwars" class="bg-section">
+        <h2>The 12 Alwars</h2>
+        <p class="intro-p">The Alwars were mystic saints of South India who lived between the 5th and 9th centuries.
+            'Alwar' means one who is entirely immersed in the boundless love of God. Click on an Alwar to learn more.
+        </p>
+
+        <div class="alwar-gallery">
+            <div class="alwar-profile"
+                onclick="openAlwarModal('Poigai Alwar', 'The first of the Mudal (first three) Alwars, born in Kanchipuram. He lit the first lamp of devotion using the earth as the vessel and the ocean as ghee to dispel ignorance.')">
+                <div class="profile-img placeholder-poigai"></div>
+                <h3>Poigai Alwar</h3>
+            </div>
+            <div class="alwar-profile"
+                onclick="openAlwarModal('Bhoothath Alwar', 'Born in Mahabalipuram, he lit the second lamp using his intense love as the vessel, devotion as ghee, and soul as the wick to behold the Lord.')">
+                <div class="profile-img placeholder-bhoothath"></div>
+                <h3>Bhoothath Alwar</h3>
+            </div>
+            <div class="alwar-profile"
+                onclick="openAlwarModal('Pey Alwar', 'Born in Mylapore, Chennai. He sang the third set of verses after witnessing the glorious vision of Lord Narayana with Goddess Lakshmi holding the divine weapons.')">
+                <div class="profile-img placeholder-pey"></div>
+                <h3>Pey Alwar</h3>
+            </div>
+            <div class="alwar-profile"
+                onclick="openAlwarModal('Thirumazhisai Alwar', 'A fiery and steadfast devotee of Lord Narayana. His profound compositions include Nanmugan Thiruvandhadhi and Thiruchanda Virutham.')">
+                <div class="profile-img placeholder-thirumazhisai"></div>
+                <h3>Thirumazhisai Alwar</h3>
+            </div>
+            <div class="alwar-profile"
+                onclick="openAlwarModal('Nammalwar', 'Considered the chief of the Alwars, meditating under a tamarind tree in Alwarthirunagari. His four compositions, notably Thiruvaymoli, are revered as the essence of the four Vedas.')">
+                <div class="profile-img placeholder-nammalwar"></div>
+                <h3>Nammalwar</h3>
+            </div>
+            <div class="alwar-profile"
+                onclick="openAlwarModal('Madhurakavi Alwar', 'A devotee not of the Lord directly, but of his Acharya, Nammalwar. His Kanninun Siruthambu establishes the absolute glory of Acharya Bhakti.')">
+                <div class="profile-img placeholder-madhurakavi"></div>
+                <h3>Madhurakavi Alwar</h3>
+            </div>
+            <div class="alwar-profile"
+                onclick="openAlwarModal('Kulasekhara Alwar', 'A Chera King who renounced his throne for devotion. His Perumal Thirumozhi deeply expresses a longing to be anything but human in the sacred hills of Tirumala.')">
+                <div class="profile-img placeholder-kulasekhara"></div>
+                <h3>Kulasekhara Alwar</h3>
+            </div>
+            <div class="alwar-profile"
+                onclick="openAlwarModal('Periyalwar', 'Also known as Vishnuchitta, who sang Pallandu to bless the Lord Himself, expressing a motherly protective love towards the Supreme Being.')">
+                <div class="profile-img placeholder-periyalwar"></div>
+                <h3>Periyalwar</h3>
+            </div>
+            <div class="alwar-profile"
+                onclick="openAlwarModal('Andal', 'The only female Alwar, an incarnation of Bhudevi. Her celebrated Thiruppavai and Nachiyar Thirumozhi depict the pinnacle of bridal mysticism.')">
+                <div class="profile-img placeholder-andal"></div>
+                <h3>Andal</h3>
+            </div>
+            <div class="alwar-profile"
+                onclick="openAlwarModal('Thondaradippodi Alwar', 'His name means dust of the feet of the devotees. He composed Thirumalai and Thiruppalliyezhuchi, waking the Lord at Srirangam every morning.')">
+                <div class="profile-img placeholder-thondaradippodi"></div>
+                <h3>Thondaradippodi Alwar</h3>
+            </div>
+            <div class="alwar-profile"
+                onclick="openAlwarModal('Thiruppaan Alwar', 'Carried into the Srirangam temple by his Acharya. He sang Amalanadipiran, passionately describing the Lord\'s beauty from feet to head, before merging into Him.')">
+                <div class="profile-img placeholder-thiruppaan"></div>
+                <h3>Thiruppaan Alwar</h3>
+            </div>
+            <div class="alwar-profile"
+                onclick="openAlwarModal('Thirumangai Alwar', 'A chieftain turned mystic who built the walls of Srirangam temple. He composed the largest number of verses after Nammalwar, functioning as the six Vedangas.')">
+                <div class="profile-img placeholder-thirumangai"></div>
+                <h3>Thirumangai Alwar</h3>
+            </div>
+        </div>
+
+        <!-- Alwar Modal container -->
+        <div id="alwarModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeAlwarModal()">&times;</span>
+                <div class="modal-header">
+                    <div id="modal-img" class="modal-img-placeholder"></div>
+                    <h3 id="modal-title">Alwar Name</h3>
+                </div>
+                <p id="modal-desc">Alwar details will appear here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acharya Parampara Section -->
+    <section id="acharyas">
+        <h2>Sri Vaishnava Guru Parampara</h2>
+        <p class="intro-p">The Acharya Parampara (lineage of preceptors) is the unbroken chain of masters through which
+            the divine knowledge of Srivaishnavism has been transmitted, originating from the Supreme Lord Himself.</p>
+
+        <div class="lineage-chart">
+            <div class="lineage-step">
+                <div class="lineage-box divine">Sriman Narayana (Perumal)</div>
+                <div class="lineage-arrow"></div>
+            </div>
+            <div class="lineage-step">
+                <div class="lineage-box divine">Sri Mahalakshmi (Thayar)</div>
+                <div class="lineage-arrow"></div>
+            </div>
+            <div class="lineage-step">
+                <div class="lineage-box divine">Sri Vishvaksena</div>
+                <div class="lineage-arrow"></div>
+            </div>
+            <div class="lineage-step">
+                <div class="lineage-box">Nammalwar (Sathakopa)</div>
+                <div class="lineage-arrow"></div>
+            </div>
+            <div class="lineage-step">
+                <div class="lineage-box">Sriman Nathamuni</div>
+                <div class="lineage-arrow"></div>
+            </div>
+            <div class="lineage-step">
+                <div class="lineage-box">Uyyakondar</div>
+                <div class="lineage-arrow"></div>
+            </div>
+            <div class="lineage-step">
+                <div class="lineage-box">Manakkal Nambi</div>
+                <div class="lineage-arrow"></div>
+            </div>
+            <div class="lineage-step">
+                <div class="lineage-box">Alavandar (Yamunacharya)</div>
+                <div class="lineage-arrow"></div>
+            </div>
+            <div class="lineage-step">
+                <div class="lineage-box">Periya Nambi</div>
+                <div class="lineage-arrow"></div>
+            </div>
+            <div class="lineage-step" style="margin-bottom: 0;">
+                <div class="lineage-box" style="margin-bottom: 0;">Sri Ramanujacharya</div>
+            </div>
+        </div>
+
+        <div class="acharya-grid">
+            <div class="acharya-card fade-in">
+                <h3>Sriman Nathamuni</h3>
+                <p>The first Acharya in the historical lineage. He revived the Nalayira Divya Prabandham which was lost
+                    over time, learning them directly from Nammalwar in a yogic trance. He set the hymns to music and
+                    introduced them into temple worship.</p>
+            </div>
+            <div class="acharya-card fade-in">
+                <h3>Yamunacharya (Alavandar)</h3>
+                <p>The grandson of Nathamuni. He established the philosophical foundations of Sri Vaishnavism, proving
+                    the supremacy of Lord Narayana and the path of Bhakti. His renowned works include Stotra Ratnam and
+                    Siddhi Trayam.</p>
+            </div>
+            <div class="acharya-card fade-in">
+                <h3>Sri Ramanujacharya</h3>
+                <p>The most prominent Acharya and the chief proponent of Visishtadvaita Vedanta. He systematized the
+                    philosophy, established extensive temple administration protocols (especially at Srirangam), and
+                    opened the path of salvation (Saranagati) to all, irrespective of societal barriers.</p>
+            </div>
+            <div class="acharya-card fade-in">
+                <h3>Swami Vedanta Desikan</h3>
+                <p>A towering polymath of the post-Ramanuja era. He defended Visishtadvaita through prolific writings in
+                    Sanskrit, Tamil, and Manipravalam. Known as the 'Lion among poets and logicians' (Kavitarkika
+                    Simha).</p>
+            </div>
+            <div class="acharya-card fade-in">
+                <h3>Manavala Mamunigal</h3>
+                <p>Considered a reincarnation of Ramanuja. He spent his life writing extensive, profound commentaries on
+                    the Divya Prabandham and the works of earlier Acharyas, making the esoteric knowledge accessible to
+                    everyone.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="divya-prabandham">
+        <h2>Nalayira Divya Prabandham</h2>
+        <p class="intro-p">The Nalayira Divya Prabandham consists of 4000 verses sung by the 12 Alwars. Here is a
+            detailed breakdown of the major compositions, their authors, and significance.</p>
+
+        <div class="table-responsive">
+            <table class="styled-table detailed-table">
+                <thead>
+                    <tr>
+                        <th>Composition</th>
+                        <th>Author (Alwar)</th>
+                        <th>Verses</th>
+                        <th>Context & Significance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="section-row">
+                        <td colspan="4"><strong>Mudal Ayiram</strong> (First Thousand - 947 Verses)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tirupallandu</strong></td>
+                        <td>Periyalwar</td>
+                        <td>12</td>
+                        <td>Sung to ward off the evil eye from the Lord when He appeared on Garuda; the foundational
+                            prayer.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Periyalwar Tirumozhi</strong></td>
+                        <td>Periyalwar</td>
+                        <td>461</td>
+                        <td>Details the childhood pastimes of Lord Krishna with deep maternal affection.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tiruppavai</strong></td>
+                        <td>Andal</td>
+                        <td>30</td>
+                        <td>Sung during Margazhi month, waking up the Lord. Considered the essence of all Upanishads.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nachiyar Tirumozhi</strong></td>
+                        <td>Andal</td>
+                        <td>143</td>
+                        <td>Expresses intense bridal mysticism and longing to marry Lord Ranganatha.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Perumal Tirumozhi</strong></td>
+                        <td>Kulasekhara Alwar</td>
+                        <td>105</td>
+                        <td>Expresses profound devotion to Lord Rama and the desire to be anything on Tirumala hills.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tiruchanda Virutham</strong></td>
+                        <td>Thirumazhisai Alwar</td>
+                        <td>120</td>
+                        <td>Composed in a rhythmic meter, establishing Lord Narayana's supremacy.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tirumalai</strong></td>
+                        <td>Thondaradippodi Alwar</td>
+                        <td>45</td>
+                        <td>A garland of verses emphasizing that the Lord's name is sweeter than Vaikuntham itself.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tiruppalliyezhuchi</strong></td>
+                        <td>Thondaradippodi Alwar</td>
+                        <td>10</td>
+                        <td>The beautiful morning hymn to wake up Lord Ranganatha at Srirangam.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Amalanadipiran</strong></td>
+                        <td>Thiruppaan Alwar</td>
+                        <td>10</td>
+                        <td>A passionate, top-to-bottom description of Lord Ranganatha's beauty leading to merging into
+                            Him.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kanninun Siruthambu</strong></td>
+                        <td>Madhurakavi Alwar</td>
+                        <td>11</td>
+                        <td>Expresses ultimate Acharya Bhakti, stating that Nammalwar is greater than the Lord Himself.
+                        </td>
+                    </tr>
+
+                    <tr class="section-row">
+                        <td colspan="4"><strong>Periya Thirumozhi</strong> (Second Thousand - 1134 Verses)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Periya Tirumozhi</strong></td>
+                        <td>Thirumangai Alwar</td>
+                        <td>1084</td>
+                        <td>Extensive hymns covering numerous Divya Desams, filled with majestic language and profound
+                            devotion.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tirukkurunthandagam</strong></td>
+                        <td>Thirumangai Alwar</td>
+                        <td>20</td>
+                        <td>Short verses deeply analyzing the nature of the soul and the Lord.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tirunedunthandagam</strong></td>
+                        <td>Thirumangai Alwar</td>
+                        <td>30</td>
+                        <td>Highly philosophical verses using the long verse meter.</td>
+                    </tr>
+
+                    <tr class="section-row">
+                        <td colspan="4"><strong>Iyarpa</strong> (Third Thousand - 817 Verses)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mudal Tiruvandhadhi</strong></td>
+                        <td>Poigai Alwar</td>
+                        <td>100</td>
+                        <td>The first light of devotion, using the earth as a vessel to see the Lord at Thirukkovilur.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Irandam Tiruvandhadhi</strong></td>
+                        <td>Bhoothath Alwar</td>
+                        <td>100</td>
+                        <td>The second light of devotion, using love as the vessel.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Moondram Tiruvandhadhi</strong></td>
+                        <td>Pey Alwar</td>
+                        <td>100</td>
+                        <td>The ecstatic vision of the Lord and Goddess Lakshmi holding divine weapons.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nanmugan Tiruvandhadhi</strong></td>
+                        <td>Thirumazhisai Alwar</td>
+                        <td>96</td>
+                        <td>Fiercely establishes the supremacy of Lord Narayana over all other deities including Brahma
+                            (Nanmugan).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tiruviruttam</strong></td>
+                        <td>Nammalwar</td>
+                        <td>100</td>
+                        <td>The essence of Rig Veda, appealing to the Lord to end the cycle of samsara.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tiruvasiriyam</strong></td>
+                        <td>Nammalwar</td>
+                        <td>7</td>
+                        <td>The essence of Yajur Veda.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Periya Tiruvandhadhi</strong></td>
+                        <td>Nammalwar</td>
+                        <td>87</td>
+                        <td>The essence of Atharva Veda.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tiruvezhukootrirukkai</strong></td>
+                        <td>Thirumangai Alwar</td>
+                        <td>1</td>
+                        <td>A unique composition structured mathematically like a temple chariot.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Siriya Tirumadal</strong></td>
+                        <td>Thirumangai Alwar</td>
+                        <td>40 (lines)</td>
+                        <td>Expresses intense Nayaki bhava (bridal mysticism).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Periya Tirumadal</strong></td>
+                        <td>Thirumangai Alwar</td>
+                        <td>78 (lines)</td>
+                        <td>Further expressions of intense longing and bridal mysticism.</td>
+                    </tr>
+
+                    <tr class="section-row">
+                        <td colspan="4"><strong>Thiruvaymoli</strong> (Fourth Thousand - 1102 Verses)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Thiruvaymoli</strong></td>
+                        <td>Nammalwar</td>
+                        <td>1102</td>
+                        <td>The crown jewel of the Prabandham, celebrated as the Tamil Sama Veda. It captures the entire
+                            philosophy of Visishtadvaita and the soul's yearning for God.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="prapatthi">
+        <h2>Prapatthi (Saranagati)</h2>
+        <p class="intro-p">The crown jewel of Srivaishnavism is the doctrine of <em>Prapatthi</em> or absolute
+            self-surrender to the Lord. Recognizing one's own inability to cross the ocean of samsara (the cycle of
+            birth and death) through karma, jnana, or bhakti alone, the soul casts its entire spiritual burden at the
+            lotus feet of the Lord in supreme faith.</p>
+        <p class="intro-p">Saranagati is marked by six distinct qualities: the intent to do what pleases the Lord,
+            avoiding what displeases Him, unwavering faith in His protection, a plea for Him to be the savior, a sense
+            of total helplessness, and the final offering of one's self (Atma Nivedanam).</p>
+    </section>
+
+    <section id="divya-desams" class="bg-section">
+        <h2>The 108 Divya Desams</h2>
+        <p class="intro-p">Divya Desams are the 108 Vishnu temples mentioned in the works of the Alwars. These are
+            primarily located in India, with one in Nepal, and two existing in the celestial realms.</p>
+
+        <div class="map-display" style="display: block;">
+            <div class="map-content">
+                <div class="map-info-card">
+                    <h3>Indian Sub-continent (Major Divya Desams)</h3>
+                    <p id="region-desc">Explore the sacred abodes of Lord Narayana across the map. Hover over the pins
+                        to see details.</p>
+                </div>
+                <!-- Interactive Map Area -->
+                <div class="interactive-map-area">
+                    <!-- map pins will be dynamically added here by javascript -->
+                    <div id="map-visual"></div>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="text-align: center; margin-top: 60px; color: var(--primary-color); font-size: 2rem;">Divya Desams
+            Master List</h3>
+        <p class="intro-p">A comprehensive overview of the major Divya Desams.</p>
+
+        <div class="table-responsive">
+            <table class="styled-table detailed-table">
+                <thead>
+                    <tr>
+                        <th>Regional Grouping</th>
+                        <th>Divya Desam Name</th>
+                        <th>Deity (Moolavar)</th>
+                        <th>Alwars (Mangalasasanam)</th>
+                    </tr>
+                </thead>
+                <tbody id="divya-desams-list-body">
+                    <!-- Table rows will be populated by script.js -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Srivaishnavism App. Created with devotion to the Acharyas and Perumal.</p>
+    </footer>
+
+    <script src="divya_desams.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
