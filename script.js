@@ -234,6 +234,37 @@ function openAlwarModal(name, desc) {
     modal.classList.add('show');
 }
 
+function openAcharyaModal(name, desc) {
+    const modal = document.getElementById('alwarModal');
+    const title = document.getElementById('modal-title');
+    const descEl = document.getElementById('modal-desc');
+    const placeholder = document.getElementById('modal-img');
+
+    title.textContent = name;
+    descEl.textContent = desc;
+
+    // Reset class and content
+    placeholder.className = 'modal-img-placeholder';
+    placeholder.style = ''; // clear programmatic inline styles
+
+    if (name === 'Sri Ramanujacharya') {
+        placeholder.classList.add('placeholder-ramanujar');
+        placeholder.textContent = '';
+    } else {
+        // Set first letter as placeholder text in the modal image
+        placeholder.textContent = name.charAt(0);
+        placeholder.style.display = 'flex';
+        placeholder.style.alignItems = 'center';
+        placeholder.style.justifyContent = 'center';
+        placeholder.style.fontSize = '4rem';
+        placeholder.style.color = 'white';
+        placeholder.style.fontFamily = "'Cinzel', serif";
+        placeholder.style.background = "linear-gradient(135deg, var(--primary-color), var(--secondary-color))";
+    }
+
+    modal.classList.add('show');
+}
+
 function closeAlwarModal() {
     const modal = document.getElementById('alwarModal');
     modal.classList.remove('show');

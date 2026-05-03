@@ -494,6 +494,11 @@ section h2::after {
   font-size: 0;
 }
 
+.placeholder-ramanujar {
+  background-image: url('assets/srimath_ramanujar.png');
+  font-size: 0;
+}
+
 /* Lineage Chart (Acharyas) */
 .lineage-chart {
   display: flex;
